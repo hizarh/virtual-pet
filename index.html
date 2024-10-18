@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var pet={
+            name:" ",
+            type:" ",
+            age :0,
+            happiness : 0,
+            hungary : 0,
+
+
+     feed:function(){
+        this.hungary = Math.max(this.hungary -20 , 0);
+        alert('your feed ${this.name}. hungary is now ${this.happiness}.')
+     },
+     
+     play:function(){
+        this.happiness = Math.min(this.happiness + 20 , 100);
+ alert('yor fed ${this.name}.hungary is now ${this.happiness}.')
+     },
+
+     agePet:function(){
+     this.age +=1;
+     this.happiness = Math.max(this.happiness -5 , 0);
+     this.hungary = Math.min(this.hungary + 10, 100);
+     },
+
+     petCare :function(){
+       
+        prompt('what would you do with your ${pet.name}.choose as option\n 1)feed\n 2)play\n 3)Age\n 4)Quit');
+       
+        var action;
+
+        if(action === 1){
+            this.feed();
+        }else if(action === 2){
+            this.play();
+        }else if(action === 3){
+            this.agePet();
+        }else{
+            alert("Quit");
+        }
+        for(action === 1; action<=5; action++){
+               
+        }
+     },
+
+        };
+
+
+   pet.name = prompt("Enter your pet name");
+   pet.type = prompt('Enter your pet type like : (cat,dog, etc).');
+   pet.age = parseInt(prompt("Enter your pet age"));
+   pet.happiness = parseInt(prompt("How happy your pet?"));
+   pet.hungary = parseInt(prompt("How hungary is your pet?"));
+   
+   
+   pet.petCare();
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
